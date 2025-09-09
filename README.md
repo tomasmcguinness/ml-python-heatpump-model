@@ -1,4 +1,4 @@
-# Simple Heat Pump input modelling
+# Simple Heat Pump Machine Learning Model
 
 This repo contains some Machine Learning experiments I'm doing in an effort to build a simple input prediction model.
 
