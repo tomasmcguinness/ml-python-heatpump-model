@@ -1,4 +1,5 @@
 import pandas
+import json
 from sklearn import linear_model
 
 df = pandas.read_csv("trainingset.csv")
@@ -6,9 +7,17 @@ df = pandas.read_csv("trainingset.csv")
 X = df[['TargetTemperature', 'OutsideTemperature']]
 y = df['Input']
 
-regr = linear_model.LinearRegression()
-regr.fit(X, y)
+model = linear_model.LinearRegression()
+model.fit(X, y)
 
-predictedInput = regr.predict([[21, 10]])
+coefficients = {
+    'coef': model.coef_.tolist(),
+    'intercept': model.intercept_.tolist()
+}
 
-print(predictedInput)
+with open('model_params.json', 'w') as f:
+    json.dump(coefficients, f)
+
+#predictedInput = regr.predict([[21, 10]])
+
+#print(predictedInput)
