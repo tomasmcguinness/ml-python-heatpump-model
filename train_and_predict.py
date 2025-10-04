@@ -10,14 +10,15 @@ y = df['Input']
 model = linear_model.LinearRegression()
 model.fit(X, y)
 
-coefficients = {
-    'coef': model.coef_.tolist(),
-    'intercept': model.intercept_.tolist()
-}
+# Save the model coefficients to a JSON file
+# coefficients = {
+#     'coef': model.coef_.tolist(),
+#     'intercept': model.intercept_.tolist()
+# }
 
-with open('model_params.json', 'w') as f:
-    json.dump(coefficients, f)
+# with open('model_params.json', 'w') as f:
+#     json.dump(coefficients, f)
 
-#predictedInput = regr.predict([[21, 10]])
+predictedInput = regr.predict([[21, 10]])
 
-#print(predictedInput)
+print(predictedInput)
