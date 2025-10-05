@@ -19,6 +19,6 @@ model.fit(X, y)
 # with open('model_params.json', 'w') as f:
 #     json.dump(coefficients, f)
 
-predictedInput = regr.predict([[21, 10]])
+predictedInput = model.predict([[21, 10]])
 
 print(predictedInput)
