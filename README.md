@@ -33,5 +33,7 @@ python train_and_predict.py
 
 Play around with the values to test different combinations.
 
+## Save
 
+I have include some code to save the model as JSON, so I could use it in another project https://github.com/tomasmcguinness/matter-js-heat-pump 
 
